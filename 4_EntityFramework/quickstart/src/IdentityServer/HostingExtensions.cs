@@ -80,7 +80,7 @@ internal static class HostingExtensions
             app.UseDeveloperExceptionPage();
         }
 
-        InitializeDatabase(app);
+        //InitializeDatabase(app);
 
         // uncomment if you want to add a UI
         app.UseStaticFiles();
