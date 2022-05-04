@@ -68,6 +68,27 @@ public static class Config
                     IdentityServerConstants.StandardScopes.Profile,
                     "api1"
                 }
+            },
+            // JavaScript Client
+            new Client
+            {
+                ClientId = "js",
+                ClientName = "JavaScript Client",
+                AllowedGrantTypes = GrantTypes.Code,
+                RequireClientSecret = false,
+                //ClientSecrets = { new Secret("secret".Sha256()) },
+
+                
+                RedirectUris =           { "https://localhost:5003/callback.html" },
+                PostLogoutRedirectUris = { "https://localhost:5003/index.html" },
+                AllowedCorsOrigins =     { "https://localhost:5003" },
+
+                AllowedScopes = 
+                {
+                    IdentityServerConstants.StandardScopes.OpenId,
+                    IdentityServerConstants.StandardScopes.Profile,
+                    "api1"
+                }
             }
         };
 }
