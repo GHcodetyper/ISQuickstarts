@@ -69,7 +69,7 @@ app.MapBffManagementEndpoints();
 
 
 app.MapRazorPages();
-app.MapControllers();
+app.MapControllers().RequireAuthorization().AsBffApiEndpoint();
 app.MapFallbackToFile("index.html");
 
 app.Run();
